@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="head">TODO-LIST</header>
+    <div onclick="todo_win()" id="add-btn">+</div>
+    <div id="todo-win">
+        <form action="">
+            <label for="">TILTLE : </label>
+            <input type="text" id="title-inp" required><BR></BR>
+
+            <label for="">DESCRIPTION : </label>
+            <textarea name="" id="desc-inp"></textarea>
+
+           <br><button id="add" onclick="add_todo()">ADD</button>
+
+        </form>
+    </div>
+    <div id="todo-container">
+    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
