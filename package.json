@@ -2,6 +2,7 @@
   "name": "todo-list-desktop",
   "private": true,
   "version": "1.0.0",
+  "description": "A simple Todo List application built with Electron and Vite",
   "type": "module",
   "main": "electron/main.js",
   "scripts": {
