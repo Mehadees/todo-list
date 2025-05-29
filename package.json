@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "A simple Todo List application built with Electron and Vite",
+  "author": "Todo List Developer",
   "type": "module",
   "main": "electron/main.js",
   "scripts": {
