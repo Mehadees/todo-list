@@ -1,0 +1,13 @@
+directories:
+  output: dist-electron
+  buildResources: build
+appId: com.todolist.app
+productName: Todo List
+win:
+  target: nsis
+mac:
+  target: dmg
+linux:
+  target: AppImage
+files: []
+electronVersion: 28.3.3
