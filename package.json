@@ -11,7 +11,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron:dev": "electron .",
-    "electron:build": "vite build && electron-builder"
+    "electron:build": "vite build && electron-builder --dir && electron-builder"
   },
   "devDependencies": {
     "vite": "^5.0.0",
@@ -22,10 +22,16 @@
     "appId": "com.todolist.app",
     "productName": "Todo List",
     "directories": {
-      "output": "dist-electron"
+      "output": "dist-electron",
+      "buildResources": "build"
     },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     },
     "mac": {
       "target": "dmg"

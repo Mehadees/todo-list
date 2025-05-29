@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const isDev = process.env.NODE_ENV === 'development'
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -11,11 +12,9 @@ function createWindow() {
     }
   })
 
-  // In development, load from Vite dev server
-  if (process.env.NODE_ENV === 'development') {
+  if (isDev) {
     win.loadURL('http://localhost:8000')
   } else {
-    // In production, load the built files
     win.loadFile(path.join(__dirname, '../dist/index.html'))
   }
 }
