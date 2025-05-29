@@ -6,10 +6,10 @@ function todo_win(){
 function add_todo(){
     event.preventDefault();
 
-    let title_inp = document.getElementById("title-inp").value
-    let desc_inp = document.getElementById("desc-inp").value
+    let title_inp = document.getElementById("title-inp")
+    let desc_inp = document.getElementById("desc-inp")
 
-    if(title_inp==""){
+    if(title_inp.value === ""){
         alert("Title is required");
         return; 
     }    
@@ -28,6 +28,9 @@ function add_todo(){
         newdiv.remove();
     };
 
+    newh1.innerText = title_inp.value;
+    newh5.innerText = desc_inp.value;
+
     newdiv.appendChild(newh1);
     newdiv.appendChild(newh5);
     newdiv.appendChild(deleteBtn);
@@ -35,12 +38,8 @@ function add_todo(){
     let todo_container = document.getElementById("todo-container");
     todo_container.appendChild(newdiv);
 
-    newh1.innerText = title_inp;
-    newh5.innerText = desc_inp;
-
+    // Clear inputs and hide window
+    title_inp.value = "";
+    desc_inp.value = "";
     document.getElementById("todo-win").style.display = "none";
-
-    // Clear both inputs
-    document.getElementById("title-inp").value = "";
-    document.getElementById("desc-inp").value = "";
 }
