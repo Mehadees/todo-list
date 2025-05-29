@@ -3,11 +3,15 @@ directories:
   buildResources: build
 appId: com.todolist.app
 productName: Todo List
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
 win:
   target: nsis
+  icon: build/icon.ico
 mac:
   target: dmg
 linux:
   target: AppImage
-files: []
 electronVersion: 28.3.3
