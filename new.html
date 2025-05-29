@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Todo List</title>
 </head>
 <body>
     <header class="head">TODO-LIST</header>
     <div onclick="todo_win()" id="add-btn">+</div>
     <div id="todo-win">
         <form action="">
-            <label for="">TILTLE : </label>
-            <input type="text" id="title-inp" required><BR></BR>
+            <label for="title-inp">TITLE:</label>
+            <input type="text" id="title-inp" required placeholder="Enter title">
 
-            <label for="">DESCRIPTION : </label>
-            <textarea name="" id="desc-inp"></textarea>
+            <label for="desc-inp">DESCRIPTION:</label>
+            <textarea id="desc-inp" placeholder="Enter description"></textarea>
 
-           <br><button id="add" onclick="add_todo()">ADD</button>
-
+            <button id="add" onclick="add_todo()">ADD</button>
         </form>
     </div>
-    <div id="todo-container">
-    
-    </div>
+    <div id="todo-container"></div>
     <script src="script.js"></script>
 </body>
 </html>
