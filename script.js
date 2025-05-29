@@ -1,13 +1,21 @@
 function todo_win(){
     document.getElementById("todo-win").style.display = 
         document.getElementById("todo-win").style.display === "block" ? "none" : "block";
+    
+    // Show todo container when closing the add window
+    if (document.getElementById("todo-win").style.display === "none") {
+        document.getElementById("todo-container").style.display = "flex";
+    } else {
+        // Hide todo container when opening the add window
+        document.getElementById("todo-container").style.display = "none";
+    }
 }
 
 function add_todo(){
     event.preventDefault();
 
-    let title_inp = document.getElementById("title-inp")
-    let desc_inp = document.getElementById("desc-inp")
+    let title_inp = document.getElementById("title-inp");
+    let desc_inp = document.getElementById("desc-inp");
 
     if(title_inp.value === ""){
         alert("Title is required");
@@ -37,6 +45,7 @@ function add_todo(){
 
     let todo_container = document.getElementById("todo-container");
     todo_container.appendChild(newdiv);
+    todo_container.style.display = "flex";
 
     // Clear inputs and hide window
     title_inp.value = "";
